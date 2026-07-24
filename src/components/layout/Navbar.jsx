@@ -52,7 +52,7 @@ export default function Navbar() {
                         <li><a href={getAnchorLink('#gallery')}>Gallery</a></li>
                         <li><Link to="/tools" style={{ color: '#8A6A4B', fontWeight: '700' }}>Calculators & Tools</Link></li>
                     </ul>
-                    <a href={getAnchorLink('#contact')} className="btn btn-primary nav-cta">Get Quote</a>
+                    <a href={getAnchorLink('#contact')} className="btn-royal nav-cta">Get Quote</a>
                 </div>
             </nav>
 
