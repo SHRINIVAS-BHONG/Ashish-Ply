@@ -1,0 +1,66 @@
+/* =========================================
+   QUICK ACTIONS MENU
+========================================= */
+.quick-actions {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+}
+.qa-toggle {
+    width: 55px; height: 55px;
+    border-radius: 50%;
+    background-color: var(--clr-charcoal);
+    color: white;
+    border: none;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+.qa-toggle:hover {
+    transform: scale(1.1);
+}
+.qa-toggle.active {
+    transform: rotate(45deg);
+    background-color: var(--clr-accent);
+}
+.qa-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.qa-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.qa-item {
+    width: 45px; height: 45px;
+    border-radius: 50%;
+    background-color: var(--clr-white);
+    color: var(--clr-charcoal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.qa-item:hover {
+    transform: scale(1.1);
+}
+.qa-wa { background-color: #25D366; color: white; }
+.qa-wa:hover { background-color: #20BA56; }
+.qa-call { background-color: #3B82F6; color: white; }
+.qa-map { background-color: #EF4444; color: white; }
+

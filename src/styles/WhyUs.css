@@ -1,0 +1,38 @@
+/* =========================================
+   WHY CHOOSE US
+========================================= */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.feature-item {
+    padding: 30px 20px;
+    background: var(--clr-surface);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--clr-border);
+    transition: var(--transition);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--clr-accent);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 0.95rem;
+}
+
