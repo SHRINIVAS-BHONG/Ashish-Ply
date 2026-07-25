@@ -115,6 +115,40 @@ img {
     background-color: var(--clr-accent-hover);
 }
 
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--clr-btn-bg);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--clr-accent);
+}
+
+.btn-outline-light {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: var(--clr-text-main);
+}
+
 .btn-outline {
     background-color: transparent;
     color: var(--clr-text-main);

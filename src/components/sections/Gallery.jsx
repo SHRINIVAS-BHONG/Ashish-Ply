@@ -26,39 +26,39 @@ export default function Gallery() {
                     </div>
 
                     <div className="bento-gallery">
-                        <button className="gallery-item frame-large reveal" onClick={() => openLightbox('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80')} aria-label="View larger image of Modern Living Room">
-                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
-                                alt="Modern Living Room Wooden Accents" loading="lazy" decoding="async" />
+                        <button className="gallery-item frame-large reveal" onClick={() => openLightbox('/images/gallery/gallery_plywood_interior_1784961103797.png')} aria-label="View larger image of Premium Plywood">
+                            <img src="/images/gallery/gallery_plywood_interior_1784961103797.png"
+                                alt="Premium Plywood Wall Paneling" loading="lazy" decoding="async" />
                         </button>
 
-                        <button className="gallery-item frame-tall reveal" onClick={() => openLightbox('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80')} aria-label="View larger image of Luxury Bath">
-                            <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=600&q=80"
-                                alt="Luxury Bathroom Interior" loading="lazy" decoding="async" />
+                        <button className="gallery-item frame-tall reveal" onClick={() => openLightbox('/images/gallery/gallery_wardrobe_1784960890463.png')} aria-label="View larger image of Premium Wardrobe">
+                            <img src="/images/gallery/gallery_wardrobe_1784960890463.png"
+                                alt="Luxury Wardrobe Design" loading="lazy" decoding="async" />
                         </button>
 
-                        <button className="gallery-item frame-square reveal" onClick={() => openLightbox('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80')} aria-label="View larger image of Modular Kitchen">
-                            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=600&q=80"
+                        <button className="gallery-item frame-square reveal" onClick={() => openLightbox('/images/gallery/gallery_kitchen_1784960866293.png')} aria-label="View larger image of Modular Kitchen">
+                            <img src="/images/gallery/gallery_kitchen_1784960866293.png"
                                 alt="Modular Kitchen Setup" loading="lazy" decoding="async" />
                         </button>
 
-                        <button className="gallery-item frame-square reveal" onClick={() => openLightbox('https://images.unsplash.com/photo-1599696848652-f0ff23bc911f?auto=format&fit=crop&w=1200&q=80')} aria-label="View larger image of Premium Details">
+                        <button className="gallery-item frame-square reveal" onClick={() => openLightbox('https://images.unsplash.com/photo-1599696848652-f0ff23bc911f?auto=format&fit=crop&w=1200&q=80')} aria-label="View larger image of Architectural Hardware">
                             <img src="https://images.unsplash.com/photo-1599696848652-f0ff23bc911f?auto=format&fit=crop&w=600&q=80"
-                                alt="Premium Interior Details" loading="lazy" decoding="async" />
+                                alt="Premium Architectural Hardware Installed" loading="lazy" decoding="async" />
                         </button>
 
-                        <button className="gallery-item frame-square reveal" onClick={() => openLightbox('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80')} aria-label="View larger image of Wardrobe Design">
-                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80"
-                                alt="Wardrobe and Storage Design" loading="lazy" decoding="async" />
+                        <button className="gallery-item frame-square reveal" onClick={() => openLightbox('/images/gallery/gallery_laminates_1784960854973.png')} aria-label="View larger image of High-Gloss Laminates">
+                            <img src="/images/gallery/gallery_laminates_1784960854973.png"
+                                alt="High-Gloss Laminate Sheets" loading="lazy" decoding="async" />
                         </button>
 
-                        <button className="gallery-item frame-wide reveal" onClick={() => openLightbox('https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1200&q=80')} aria-label="View larger image of Exterior Deck">
-                            <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=800&q=80"
-                                alt="Exterior Deck and Cladding" loading="lazy" decoding="async" />
+                        <button className="gallery-item frame-wide reveal" onClick={() => openLightbox('/images/gallery/gallery_panels_1784960910596.png')} aria-label="View larger image of Wood Paneled Living Room">
+                            <img src="/images/gallery/gallery_panels_1784960910596.png"
+                                alt="Wood Paneled Living Room" loading="lazy" decoding="async" />
                         </button>
 
-                        <button className="gallery-item frame-square reveal" onClick={() => openLightbox('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80')} aria-label="View larger image of Minimalist Kitchen">
-                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80"
-                                alt="Minimalist Kitchen Surface" loading="lazy" decoding="async" />
+                        <button className="gallery-item frame-square reveal" onClick={() => openLightbox('/images/gallery/gallery_marine_interior_1784961183707.png')} aria-label="View larger image of Marine Grade Plywood Vanity">
+                            <img src="/images/gallery/gallery_marine_interior_1784961183707.png"
+                                alt="Marine Grade Plywood Bathroom Vanity" loading="lazy" decoding="async" />
                         </button>
                     </div>
                 </div>

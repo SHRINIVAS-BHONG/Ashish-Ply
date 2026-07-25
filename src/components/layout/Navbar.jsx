@@ -2,16 +2,6 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
-    const location = useLocation();
-    
-    // For navigating back to home anchor links
-    const getAnchorLink = (anchor) => {
-        if (location.pathname === '/') {
-            return anchor;
-        }
-        return `/${anchor}`;
-    };
-
     const openMobileMenu = () => {
         document.getElementById('mobile-drawer').classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -48,11 +38,11 @@ export default function Navbar() {
                     <ul className="nav-links">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/about">About</Link></li>
-                        <li><a href={getAnchorLink('#why-us')}>Why Us</a></li>
-                        <li><a href={getAnchorLink('#gallery')}>Gallery</a></li>
+                        <li><Link to="/#why-us">Why Us</Link></li>
+                        <li><Link to="/#gallery">Gallery</Link></li>
                         <li><Link to="/tools" style={{ color: '#8A6A4B', fontWeight: '700' }}>Calculators & Tools</Link></li>
                     </ul>
-                    <a href={getAnchorLink('#contact')} className="btn-royal nav-cta">Get Quote</a>
+                    <Link to="/#contact" className="btn-royal nav-cta">Get Quote</Link>
                 </div>
             </nav>
 
@@ -62,10 +52,10 @@ export default function Navbar() {
                     <ul className="mobile-links" onClick={closeMobileMenu}>
                         <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
                         <li><Link to="/about" onClick={closeMobileMenu}>About</Link></li>
-                        <li><a href={getAnchorLink('#why-us')} onClick={closeMobileMenu}>Why Us</a></li>
-                        <li><a href={getAnchorLink('#gallery')} onClick={closeMobileMenu}>Gallery</a></li>
+                        <li><Link to="/#why-us" onClick={closeMobileMenu}>Why Us</Link></li>
+                        <li><Link to="/#gallery" onClick={closeMobileMenu}>Gallery</Link></li>
                         <li><Link to="/tools" onClick={closeMobileMenu} style={{ color: '#8A6A4B', fontWeight: '700' }}>Calculators & Tools</Link></li>
-                        <li><a href={getAnchorLink('#contact')} onClick={closeMobileMenu}>Contact</a></li>
+                        <li><Link to="/#contact" onClick={closeMobileMenu}>Contact</Link></li>
                     </ul>
                     <div className="mobile-drawer-actions">
                         <a href="tel:02462230003" className="btn btn-outline btn-full">Call Now</a>

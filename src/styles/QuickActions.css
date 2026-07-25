@@ -14,7 +14,7 @@
 .qa-toggle {
     width: 55px; height: 55px;
     border-radius: 50%;
-    background-color: var(--clr-charcoal);
+    background-color: var(--clr-text-main);
     color: white;
     border: none;
     box-shadow: var(--shadow-md);
@@ -48,8 +48,8 @@
 .qa-item {
     width: 45px; height: 45px;
     border-radius: 50%;
-    background-color: var(--clr-white);
-    color: var(--clr-charcoal);
+    background-color: var(--clr-white, #fff);
+    color: var(--clr-text-main);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,4 +63,3 @@
 .qa-wa:hover { background-color: #20BA56; }
 .qa-call { background-color: #3B82F6; color: white; }
 .qa-map { background-color: #EF4444; color: white; }
-
