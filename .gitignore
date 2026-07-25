@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Scripts and Prompts
+*.py
+Aashish_Ply_Antigravity_Master_Prompt.md
