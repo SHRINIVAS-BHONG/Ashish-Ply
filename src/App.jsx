@@ -8,7 +8,8 @@ import Footer from './components/layout/Footer';
 // Pages
 import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
-import ToolsPage from './pages/ToolsPage';
+import GalleryPage from './pages/GalleryPage';
+
 
 // Scroll to top helper on route change
 function ScrollToTop() {
@@ -128,7 +129,8 @@ export default function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<AboutPage />} />
-                    <Route path="/tools" element={<ToolsPage />} />
+                    <Route path="/gallery" element={<GalleryPage />} />
+
                 </Routes>
             </Suspense>
 

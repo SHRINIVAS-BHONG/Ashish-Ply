@@ -39,8 +39,8 @@ export default function Navbar() {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/about">About</Link></li>
                         <li><Link to="/#why-us">Why Us</Link></li>
-                        <li><Link to="/#gallery">Gallery</Link></li>
-                        <li><Link to="/tools" style={{ color: '#8A6A4B', fontWeight: '700' }}>Calculators & Tools</Link></li>
+                        <li><Link to="/gallery">Gallery</Link></li>
+
                     </ul>
                     <Link to="/#contact" className="btn-royal nav-cta">Get Quote</Link>
                 </div>
@@ -53,8 +53,8 @@ export default function Navbar() {
                         <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
                         <li><Link to="/about" onClick={closeMobileMenu}>About</Link></li>
                         <li><Link to="/#why-us" onClick={closeMobileMenu}>Why Us</Link></li>
-                        <li><Link to="/#gallery" onClick={closeMobileMenu}>Gallery</Link></li>
-                        <li><Link to="/tools" onClick={closeMobileMenu} style={{ color: '#8A6A4B', fontWeight: '700' }}>Calculators & Tools</Link></li>
+                        <li><Link to="/gallery" onClick={closeMobileMenu}>Gallery</Link></li>
+
                         <li><Link to="/#contact" onClick={closeMobileMenu}>Contact</Link></li>
                     </ul>
                     <div className="mobile-drawer-actions">

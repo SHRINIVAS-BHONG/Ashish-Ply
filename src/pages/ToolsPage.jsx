@@ -1,5 +1,5 @@
 import React from 'react';
-import { MaterialCalculator, MaterialCompare } from '../components/InteractiveTools';
+import { MaterialCompare } from '../components/InteractiveTools';
 
 export default function ToolsPage() {
     return (
@@ -7,14 +7,11 @@ export default function ToolsPage() {
             <div className="container">
                 <div className="section-header text-center reveal active">
                     <span className="section-label">Smart Utilities</span>
-                    <h2>Interactive Tools & Calculators</h2>
-                    <p>Compare materials and estimate your exact requirements.</p>
+                    <h2>Compare Materials</h2>
+                    <p>Compare plywood, boards, and surfaces side-by-side to make the best choice.</p>
                 </div>
 
-                <div className="royal-tools-wrapper mt-5" style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
-                    <div className="royal-tools-grid">
-                        <MaterialCalculator />
-                    </div>
+                <div className="royal-tools-wrapper mt-5">
                     <div className="royal-tools-section">
                         <MaterialCompare />
                     </div>

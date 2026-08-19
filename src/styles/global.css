@@ -1325,3 +1325,15 @@ img {
     transform: translateY(-2px);
     color: #ffffff !important;
 }
+
+/* =========================================
+   UTILITIES
+   ========================================= */
+.text-center {
+    text-align: center !important;
+}
+
+.mt-5 {
+    margin-top: 48px !important;
+}
+

@@ -5,7 +5,7 @@ export default function WhyUs() {
         <section id="why-us" className="why-us section-padding bg-stone">
             <div className="container">
                 <div className="section-header text-center reveal">
-                    <h2>Why Choose Aashish Ply?</h2>
+                    <h2>Why Choose us?</h2>
                     <p>Building long-term relationships through trust and quality.</p>
                 </div>
 
@@ -15,11 +15,7 @@ export default function WhyUs() {
                         <h3>Original Products</h3>
                         <p>We guarantee 100% authentic products from top brands. No compromises on material integrity.</p>
                     </div>
-                    <div className="feature-card reveal">
-                        <div className="feature-icon">💡</div>
-                        <h3>Expert Guidance</h3>
-                        <p>Not sure which plywood suits your climate? Our experienced team provides honest, professional advice.</p>
-                    </div>
+
                     <div className="feature-card reveal">
                         <div className="feature-icon">🏷️</div>
                         <h3>Competitive Pricing</h3>
