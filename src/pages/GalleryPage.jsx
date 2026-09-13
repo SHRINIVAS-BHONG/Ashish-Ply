@@ -1,21 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import OptimizedImage from '../components/common/OptimizedImage';
+import { prefetchImages, prefetchScheduler, globalImageCache } from '../utils/imageOptimization';
 
 const galleryItems = [
     {
         type: 'image',
-        src: '/images/gallery/gallery_plywood_interior_1784961103797.png',
+        src: '/images/gallery/gallery_plywood_interior_1784961103797.webp',
+        thumbSrc: '/images/gallery/gallery_plywood_interior_1784961103797_thumb.webp',
         alt: 'Premium Plywood Wall Paneling',
         frameClass: 'frame-large'
     },
     {
         type: 'image',
-        src: '/images/gallery/gallery_wardrobe_1784960890463.png',
+        src: '/images/gallery/gallery_wardrobe_1784960890463.webp',
+        thumbSrc: '/images/gallery/gallery_wardrobe_1784960890463_thumb.webp',
         alt: 'Luxury Wardrobe Design',
         frameClass: 'frame-tall'
     },
     {
         type: 'image',
-        src: '/images/gallery/gallery_kitchen_1784960866293.png',
+        src: '/images/gallery/gallery_kitchen_1784960866293.webp',
+        thumbSrc: '/images/gallery/gallery_kitchen_1784960866293_thumb.webp',
         alt: 'Modular Kitchen Setup',
         frameClass: 'frame-square'
     },
@@ -28,55 +33,64 @@ const galleryItems = [
     },
     {
         type: 'image',
-        src: '/images/gallery/gallery_laminates_1784960854973.png',
+        src: '/images/gallery/gallery_laminates_1784960854973.webp',
+        thumbSrc: '/images/gallery/gallery_laminates_1784960854973_thumb.webp',
         alt: 'High-Gloss Laminate Sheets',
         frameClass: 'frame-square'
     },
     {
         type: 'image',
-        src: '/images/gallery/gallery_panels_1784960910596.png',
+        src: '/images/gallery/gallery_panels_1784960910596.webp',
+        thumbSrc: '/images/gallery/gallery_panels_1784960910596_thumb.webp',
         alt: 'Wood Paneled Living Room',
         frameClass: 'frame-wide'
     },
     {
         type: 'image',
-        src: '/images/gallery/gallery_marine_interior_1784961183707.png',
+        src: '/images/gallery/gallery_marine_interior_1784961183707.webp',
+        thumbSrc: '/images/gallery/gallery_marine_interior_1784961183707_thumb.webp',
         alt: 'Marine Grade Plywood Bathroom Vanity',
         frameClass: 'frame-square'
     },
     {
         type: 'image',
-        src: '/images/gallery/mortise_lock.png',
+        src: '/images/gallery/mortise_lock.webp',
+        thumbSrc: '/images/gallery/mortise_lock_thumb.webp',
         alt: 'Premium Mortise Door Lock Installation',
         frameClass: 'frame-square'
     },
     {
         type: 'image',
-        src: '/images/gallery/light_latches.jpg',
+        src: '/images/gallery/light_latches.webp',
+        thumbSrc: '/images/gallery/light_latches_thumb.webp',
         alt: 'Sleek Modern Brass Light Window Latch',
         frameClass: 'frame-square'
     },
     {
         type: 'image',
-        src: '/images/gallery/normal_handle.jpg',
+        src: '/images/gallery/normal_handle.webp',
+        thumbSrc: '/images/gallery/normal_handle_thumb.webp',
         alt: 'Sleek Modern Satin Chrome Door Lever Handle',
         frameClass: 'frame-square'
     },
     {
         type: 'image',
-        src: '/images/gallery/cabinet_handle.jpg',
+        src: '/images/gallery/cabinet_handle.webp',
+        thumbSrc: '/images/gallery/cabinet_handle_thumb.webp',
         alt: 'Elegant Modern Brushed Brass Cabinet Pull Handle',
         frameClass: 'frame-square'
     },
     {
         type: 'image',
-        src: '/images/gallery/bed_fittings.jpg',
+        src: '/images/gallery/bed_fittings.webp',
+        thumbSrc: '/images/gallery/bed_fittings_thumb.webp',
         alt: 'Heavy-Duty Hydraulic Gas Lift Bed Fittings',
         frameClass: 'frame-wide'
     },
     {
         type: 'image',
-        src: '/images/gallery/wall_louvers.jpg',
+        src: '/images/gallery/wall_louvers.webp',
+        thumbSrc: '/images/gallery/wall_louvers_thumb.webp',
         alt: 'Premium Fluted Wood Wall Louver Paneling',
         frameClass: 'frame-wide'
     }
@@ -87,6 +101,21 @@ const imageItems = galleryItems.filter(item => item.type === 'image');
 
 export default function GalleryPage() {
     const [activeIndex, setActiveIndex] = useState(null);
+
+    // Initial prefetch of thumbnails
+    useEffect(() => {
+        prefetchImages(imageItems.map(item => item.thumbSrc), false);
+    }, []);
+
+    // DSA Priority prefetch: When activeIndex changes, preload prev and next images with high priority
+    useEffect(() => {
+        if (activeIndex !== null) {
+            const nextIdx = (activeIndex + 1) % imageItems.length;
+            const prevIdx = (activeIndex - 1 + imageItems.length) % imageItems.length;
+            prefetchScheduler.enqueue(imageItems[nextIdx].src, true);
+            prefetchScheduler.enqueue(imageItems[prevIdx].src, true);
+        }
+    }, [activeIndex]);
 
     const openLightbox = (imgSrc) => {
         const idx = imageItems.findIndex(item => item.src === imgSrc);
@@ -127,12 +156,14 @@ export default function GalleryPage() {
                                     className={`gallery-item ${item.frameClass} reveal active`} 
                                     onClick={() => openLightbox(item.src)} 
                                     aria-label={`View larger image of ${item.alt}`}
+                                    style={{ border: 'none', background: 'transparent', padding: 0, cursor: 'pointer', overflow: 'hidden' }}
                                 >
-                                    <img 
-                                        src={item.thumbSrc || item.src} 
+                                    <OptimizedImage 
+                                        src={item.src}
+                                        webpSrc={item.src}
+                                        thumbSrc={item.thumbSrc} 
                                         alt={item.alt} 
-                                        loading="lazy" 
-                                        decoding="async" 
+                                        loading={idx < 4 ? "eager" : "lazy"} 
                                     />
                                 </button>
                             );
@@ -163,6 +194,7 @@ export default function GalleryPage() {
                         className="lightbox-content" 
                         src={imageItems[activeIndex].src} 
                         alt={imageItems[activeIndex].alt} 
+                        decoding="async"
                         onClick={e => e.stopPropagation()} 
                     />
                     <div className="lightbox-controls">

@@ -1,25 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import OptimizedImage from '../common/OptimizedImage';
+import { prefetchImages } from '../../utils/imageOptimization';
 
 const previewItems = [
     {
         src: '/images/gallery/gallery_plywood_interior_1784961103797.png',
+        webpSrc: '/images/gallery/gallery_plywood_interior_1784961103797.webp',
+        thumbSrc: '/images/gallery/gallery_plywood_interior_1784961103797_thumb.webp',
         title: 'Luxury Paneling',
         description: 'Premium hardwood veneers & designer wall treatments.'
     },
     {
         src: '/images/gallery/gallery_wardrobe_1784960890463.png',
+        webpSrc: '/images/gallery/gallery_wardrobe_1784960890463.webp',
+        thumbSrc: '/images/gallery/gallery_wardrobe_1784960890463_thumb.webp',
         title: 'Sleek Wardrobes',
         description: 'Custom built with BWR ply and acrylic laminates.'
     },
     {
         src: '/images/gallery/gallery_kitchen_1784960866293.png',
+        webpSrc: '/images/gallery/gallery_kitchen_1784960866293.webp',
+        thumbSrc: '/images/gallery/gallery_kitchen_1784960866293_thumb.webp',
         title: 'Modular Kitchens',
         description: 'Water-resistant BWP marine plywood configurations.'
     }
 ];
 
 export default function Gallery() {
+    useEffect(() => {
+        prefetchImages(previewItems.map(item => item.webpSrc), true);
+    }, []);
+
     return (
         <section id="gallery" className="gallery section-padding bg-light">
             <div className="container">
@@ -32,7 +44,13 @@ export default function Gallery() {
                 <div className="preview-gallery-grid mt-5">
                     {previewItems.map((item, idx) => (
                         <div key={idx} className="preview-item reveal active">
-                            <img src={item.src} alt={item.title} loading="lazy" />
+                            <OptimizedImage
+                                src={item.src}
+                                webpSrc={item.webpSrc}
+                                thumbSrc={item.thumbSrc}
+                                alt={item.title}
+                                loading="lazy"
+                            />
                             <div className="preview-overlay">
                                 <h4>{item.title}</h4>
                                 <p>{item.description}</p>

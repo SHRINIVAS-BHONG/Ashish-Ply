@@ -7,7 +7,10 @@ export default function Footer() {
                 <div className="container footer-grid">
                     <div className="footer-brand">
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '1.5rem' }}>
-                            <img src="/logo.png" alt="Aashish Ply Logo" className="footer-logo-img" style={{ maxHeight: '55px' }} />
+                            <picture>
+                                <source srcSet="/logo.webp" type="image/webp" />
+                                <img src="/logo.png" alt="Aashish Ply Logo" className="footer-logo-img" style={{ maxHeight: '55px', width: 'auto' }} width="55" height="55" loading="lazy" decoding="async" />
+                            </picture>
                             <div className="footer-logo-text" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                 <div style={{ letterSpacing: '0.5px', color: '#ffffff', lineHeight: '1', fontFamily: 'sans-serif', display: 'flex', alignItems: 'baseline' }}>
                                     <span style={{ color: '#c02638', fontWeight: '900', fontSize: 'clamp(1.8rem, 6vw, 2.8rem)' }}>A</span>

@@ -800,9 +800,6 @@ img {
     }
 }
 
-    font-weight: 500;
-}
-
 .royal-subtext {
     font-family: var(--font-body);
     color: var(--clr-text-light);

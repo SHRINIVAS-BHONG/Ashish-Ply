@@ -33,12 +33,12 @@ function ScrollToTop() {
 
 export default function App() {
     useEffect(() => {
-        // Preloader
+        // Instant Preloader dismissal
         const preloader = document.getElementById('preloader');
         if (preloader) {
             const timer = setTimeout(() => {
                 preloader.classList.add('hidden');
-            }, 1000);
+            }, 80);
             return () => clearTimeout(timer);
         }
     }, []);
@@ -99,7 +99,10 @@ export default function App() {
             
             <div id="preloader" className="preloader">
                 <div className="preloader-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px' }}>
-                    <img src="/logo.png" alt="Aashish Ply Logo" className="logo-img" style={{ maxHeight: '80px' }} />
+                    <picture>
+                        <source srcSet="/logo.webp" type="image/webp" />
+                        <img src="/logo.png" alt="Aashish Ply Logo" className="logo-img" style={{ maxHeight: '80px' }} width="80" height="80" />
+                    </picture>
                     <div className="logo-text" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <div style={{ letterSpacing: '0.5px', color: '#636363', lineHeight: '1', fontFamily: 'sans-serif', display: 'flex', alignItems: 'baseline' }}>
                             <span style={{ color: '#c02638', fontWeight: '900', fontSize: 'clamp(2rem, 8vw, 4rem)' }}>A</span>

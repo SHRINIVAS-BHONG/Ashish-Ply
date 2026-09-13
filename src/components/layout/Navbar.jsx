@@ -17,7 +17,10 @@ export default function Navbar() {
             <nav id="navbar" className="nav-transparent">
                 <div className="nav-container">
                     <Link to="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
-                        <img src="/logo.png" alt="Aashish Ply Logo" className="logo-img" style={{ maxHeight: '45px' }} />
+                        <picture>
+                            <source srcSet="/logo.webp" type="image/webp" />
+                            <img src="/logo.png" alt="Aashish Ply Logo" className="logo-img" style={{ maxHeight: '45px', width: 'auto' }} width="45" height="45" decoding="async" />
+                        </picture>
                         <div className="logo-text" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                             <div style={{ letterSpacing: '0.5px', color: '#636363', lineHeight: '1', fontFamily: 'sans-serif', display: 'flex', alignItems: 'baseline' }}>
                                 <span style={{ color: '#c02638', fontWeight: '900', fontSize: 'clamp(1.8rem, 6vw, 2.8rem)' }}>A</span>
