@@ -61,7 +61,7 @@ export default function Navbar() {
                         <li><Link to="/#contact" onClick={closeMobileMenu}>Contact</Link></li>
                     </ul>
                     <div className="mobile-drawer-actions">
-                        <a href="tel:02462230003" className="btn btn-outline btn-full">Call Now</a>
+                        <a href="tel:+918888030786" className="btn btn-outline btn-full">Call Now</a>
                         <a href="https://wa.me/918888030786" className="btn btn-primary btn-full">WhatsApp Us</a>
                     </div>
                 </div>

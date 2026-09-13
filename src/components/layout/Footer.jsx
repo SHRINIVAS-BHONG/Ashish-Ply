@@ -35,7 +35,7 @@ export default function Footer() {
 
                     <div className="footer-contact">
                         <h4>Contact Us</h4>
-                        <p><a href="tel:02462230003">02462-230003</a></p>
+                        <p><a href="tel:+918888030786">+91 8888030786</a></p>
                         <p><a href="https://wa.me/918888030786">+91 8888030786</a></p>
                         <p>2nd Floor, Kothari Complex, Shivaji Nagar, Nanded</p>
                     </div>

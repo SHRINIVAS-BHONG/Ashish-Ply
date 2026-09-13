@@ -31,7 +31,7 @@ export default function Contact() {
 
                         <div className="info-block">
                             <h3>Connect With Us</h3>
-                            <p><strong>Phone:</strong> <a href="tel:02462230003" className="text-link">02462-230003</a></p>
+                            <p><strong>Phone:</strong> <a href="tel:+918888030786" className="text-link">+91 8888030786</a></p>
                             <p><strong>WhatsApp:</strong> <a href="https://wa.me/918888030786" className="text-link">+91 8888030786</a></p>
                             <p><strong>Email:</strong> <a href="mailto:jajoo.aashish1801@gmail.com" className="text-link">jajoo.aashish1801@gmail.com</a></p>
                         </div>

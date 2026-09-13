@@ -14,7 +14,7 @@ export default function Hero() {
                         <span className="badge">Large Selection</span>
                     </div>
                     <div className="hero-buttons">
-                        <a href="tel:02462230003" className="btn btn-primary">Call Now</a>
+                        <a href="tel:+918888030786" className="btn btn-primary">Call Now</a>
                         <a href="https://wa.me/918888030786" className="btn btn-outline-light">WhatsApp Us</a>
                     </div>
                 </div>
