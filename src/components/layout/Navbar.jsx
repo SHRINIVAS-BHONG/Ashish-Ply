@@ -42,10 +42,9 @@ export default function Navbar() {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/about">About</Link></li>
                         <li><Link to="/#why-us">Why Us</Link></li>
-                        <li><Link to="/gallery">Gallery</Link></li>
-
+                        <li><Link to="/gallery">Products</Link></li>
                     </ul>
-                    <Link to="/#contact" className="btn-royal nav-cta">Get Quote</Link>
+                    <Link to="/#contact" className="btn-royal nav-cta">Enquire Now</Link>
                 </div>
             </nav>
 
@@ -56,8 +55,7 @@ export default function Navbar() {
                         <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
                         <li><Link to="/about" onClick={closeMobileMenu}>About</Link></li>
                         <li><Link to="/#why-us" onClick={closeMobileMenu}>Why Us</Link></li>
-                        <li><Link to="/gallery" onClick={closeMobileMenu}>Gallery</Link></li>
-
+                        <li><Link to="/gallery" onClick={closeMobileMenu}>Products</Link></li>
                         <li><Link to="/#contact" onClick={closeMobileMenu}>Contact</Link></li>
                     </ul>
                     <div className="mobile-drawer-actions">
