@@ -21,7 +21,7 @@ export default function Footer() {
                             </span>
                         </div>
                     </div>
-                    <p>Nanded’s trusted supplier of premium interior materials, plywood, and architectural hardware.</p>
+                    <p>Nanded’s trusted destination for modular kitchen solutions, total home &amp; office interior materials, plywood, and architectural fittings.</p>
                 </div>
 
                 <div className="footer-links">
