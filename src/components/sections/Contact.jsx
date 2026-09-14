@@ -52,7 +52,7 @@ export default function Contact() {
                                 <label htmlFor="requirement">I am looking for...</label>
                                 <select id="requirement" required defaultValue="">
                                     <option value="" disabled>Select an option</option>
-                                    <option value="Plywood & Laminates">Plywood & Laminates</option>
+                                    <option value="Interior Solutions & Laminates">Interior Solutions & Laminates</option>
                                     <option value="Kitchen Hardware">Kitchen Hardware</option>
                                     <option value="Wardrobe Accessories">Wardrobe Accessories</option>
                                     <option value="Project Quotation">Full Project Quotation</option>

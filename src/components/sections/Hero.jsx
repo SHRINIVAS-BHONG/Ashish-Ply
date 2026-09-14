@@ -7,7 +7,7 @@ export default function Hero() {
             <div className="container hero-container">
                 <div className="hero-content fade-in-up reveal">
                     <h1>Premium Materials for Timeless Interiors.</h1>
-                    <p>Nanded’s trusted supplier of high-quality plywood, laminates, and architectural hardware. We help homeowners and designers craft exceptional spaces.</p>
+                    <p>Nanded’s trusted destination for comprehensive interior solutions, premium surfaces, and architectural hardware. We help homeowners and designers craft exceptional spaces.</p>
                     <div className="hero-badges">
                         <span className="badge">Years of Experience</span>
                         <span className="badge">Trusted Brands</span>

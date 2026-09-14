@@ -31,7 +31,7 @@ export default function AboutPage() {
                             With years of deep-rooted experience in the interior materials industry, <strong>Aashish Ply &amp; Interior Fittings</strong> was established to bridge the gap between premium international quality and accessible local pricing in Nanded and surrounding regions.
                         </p>
                         <p style={{ fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '20px', color: 'var(--clr-text-light)' }}>
-                            We partner with top architects, interior designers, contractors, and discerning homeowners, supplying authenticated marine-grade plywood, architectural hardware, luxury veneers, and complete turnkey material packages for modern living and working spaces.
+                            We partner with top architects, interior designers, contractors, and discerning homeowners, providing premium interior solutions, architectural hardware, luxury veneers, and complete turnkey material packages for modern living and working spaces.
                         </p>
 
                         <div className="founder-block mt-4" style={{ borderLeft: '4px solid #A07C5A', paddingLeft: '20px', background: '#FCFAF7', padding: '16px 20px', borderRadius: '0 12px 12px 0' }}>

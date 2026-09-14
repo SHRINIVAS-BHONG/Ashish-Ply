@@ -13,7 +13,7 @@ export default function About() {
                     <span className="section-label">Our Story</span>
                     <h2>Crafting Spaces with Integrity</h2>
                     <p>Located in the heart of Nanded at Shivaji Nagar, Aashish Ply & Interior Fittings is your dedicated partner in interior design. We believe that a beautiful home starts with uncompromising material quality.</p>
-                    <p>Whether you are an architect designing a luxury villa, a carpenter building custom furniture, or a homeowner renovating your kitchen, our curated selection of premium plywood, laminates, and hardware ensures your vision is built to last.</p>
+                    <p>Whether you are an architect designing a luxury villa, a carpenter building custom furniture, or a homeowner renovating your kitchen, our curated selection of premium interior solutions, decorative surfaces, and hardware ensures your vision is built to last.</p>
 
                     <div className="founder-block mt-3">
                         <p className="founder-name">Aashish Jajoo</p>

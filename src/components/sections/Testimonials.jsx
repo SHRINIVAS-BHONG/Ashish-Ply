@@ -12,7 +12,7 @@ export default function Testimonials() {
                 <div className="testimonial-grid reveal">
                     <div className="review-card">
                         <div className="stars">★★★★★</div>
-                        <p>"Excellent quality plywood and very helpful staff. Aashish guided me perfectly on which materials to use for my modular kitchen. Highly recommend!"</p>
+                        <p>"Excellent interior solutions and very helpful staff. Aashish guided me perfectly on which materials and fittings to use for my modular kitchen. Highly recommend!"</p>
                         <p className="reviewer">- Rohan Deshmukh, Nanded</p>
                     </div>
                     <div className="review-card">
