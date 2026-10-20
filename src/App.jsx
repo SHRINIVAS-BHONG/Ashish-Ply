@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 // Layout
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import FestiveGreetingModal from './components/common/FestiveGreetingModal';
 
 // Pages
 import Home from './pages/Home';
@@ -96,6 +97,7 @@ export default function App() {
     return (
         <BrowserRouter>
             <ScrollToTop />
+            <FestiveGreetingModal />
             
             <div id="preloader" className="preloader">
                 <div className="preloader-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px' }}>

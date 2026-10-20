@@ -1,0 +1,201 @@
+/* ==========================================================
+   MOBILE-OPTIMIZED INTERSTITIAL AD POPUP
+   Scales dynamically on all screen sizes & never cuts off
+   ========================================================== */
+
+/* --- Backdrop Overlay --- */
+.festive-ad-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background: rgba(10, 10, 12, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    animation: festiveFadeIn 0.3s ease-out forwards;
+    overflow: hidden;
+}
+
+/* --- Container Structure (Flex Column) --- */
+.festive-ad-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 98vh;
+    max-height: 98dvh;
+    box-sizing: border-box;
+    animation: festiveScaleUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* --- Top Close Button Bar --- */
+/* Sits directly ABOVE the image so the logos are 100% visible and NEVER covered */
+.festive-ad-top-action {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+.festive-ad-close-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+    padding: 6px 14px 6px 16px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+    touch-action: manipulation;
+}
+
+.festive-ad-close-btn .close-icon {
+    font-size: 1.35rem;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.festive-ad-close-btn:hover,
+.festive-ad-close-btn:active {
+    background: #c02638;
+    color: #ffffff;
+    border-color: #c02638;
+    transform: scale(1.05);
+}
+
+/* --- Image Box --- */
+.festive-ad-image-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000000;
+    box-shadow: 
+        0 15px 45px rgba(0, 0, 0, 0.7),
+        0 0 0 2px rgba(212, 175, 55, 0.4),
+        0 0 25px rgba(212, 175, 55, 0.2);
+}
+
+/* --- Ad Image (Responsive scaling based on BOTH width and height) --- */
+.festive-ad-image {
+    display: block;
+    width: auto;
+    height: auto;
+    /* Desktop limits */
+    max-width: min(88vw, 480px);
+    max-height: 76vh;
+    max-height: 76dvh;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* --- Dismiss Hint (Under the image) --- */
+.festive-ad-dismiss-hint {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: color 0.2s ease;
+    padding: 6px 12px;
+}
+
+.festive-ad-dismiss-hint:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* --- Animations --- */
+@keyframes festiveFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes festiveScaleUp {
+    from {
+        transform: scale(0.92);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* --- Mobile Specific Optimization (Phones & Small Tablets) --- */
+@media (max-width: 600px) {
+    .festive-ad-overlay {
+        padding: 10px 14px;
+    }
+
+    .festive-ad-top-action {
+        margin-bottom: 6px;
+    }
+
+    .festive-ad-close-btn {
+        padding: 5px 12px 5px 14px;
+        font-size: 0.76rem;
+    }
+
+    .festive-ad-image-box {
+        border-radius: 12px;
+        box-shadow: 
+            0 10px 30px rgba(0, 0, 0, 0.8),
+            0 0 0 1.5px rgba(212, 175, 55, 0.4);
+    }
+
+    .festive-ad-image {
+        /* Mobile height: leaves room for top button, dismiss hint, and mobile browser address bars */
+        max-width: 86vw;
+        max-height: 68vh;
+        max-height: 68dvh;
+        border-radius: 10px;
+    }
+
+    .festive-ad-dismiss-hint {
+        font-size: 0.72rem;
+        margin-top: 8px;
+    }
+}
+
+/* --- Landscape / Short Screens (e.g. mobile turned sideways or short viewports) --- */
+@media (max-height: 550px) {
+    .festive-ad-top-action {
+        margin-bottom: 4px;
+    }
+
+    .festive-ad-close-btn {
+        padding: 3px 10px;
+        font-size: 0.7rem;
+    }
+
+    .festive-ad-image {
+        max-height: 64vh;
+        max-height: 64dvh;
+    }
+
+    .festive-ad-dismiss-hint {
+        display: none;
+    }
+}
